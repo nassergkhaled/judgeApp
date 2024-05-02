@@ -1,0 +1,439 @@
+﻿<?php
+session_start();
+?>
+
+
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <title>Account registration form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0;
+      font-weight: 400;
+      }
+      h3 {
+      margin: 12px 0;
+      color: #8ebf42;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      }
+      fieldset {
+      border: none;
+      border-top: 1px solid #8ebf42;
+      }
+      .account-details, .tec-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .account-details >div, .tec-details >div >div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+      .account-details >div, .tec-details >div, input, label,textarea {
+      width: 100%;
+      }
+      label {
+      padding: 0 5px;
+      text-align: right;
+      vertical-align: middle;
+      }
+      input {
+      padding: 5px;
+      vertical-align: middle;
+      }
+	  
+	 
+      .checkbox {
+      margin-bottom: 10px;
+      }
+      select, .range, .gender, .bdate-block {
+      width: calc(100% + 20px);
+      padding: 7px 0;
+      }
+      select {
+      background: transparent;
+      }
+      .gender input {
+      width: auto;
+      } 
+      .gender label {
+      padding: 0 5px 0 0;
+      } 
+      .bdate-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .birthdate select.day {
+      width: 35px;
+      }
+      .birthdate select.city {
+      width: calc(100% - 230px);
+      }
+      .birthdate input {
+      width: 38px;
+      vertical-align: unset;
+      }
+      .checkbox input, .range input {
+      width: auto;
+      margin: -2px 10px 0 0;
+      }
+      .checkbox a {
+      color: #8ebf42;
+      }
+      .checkbox a:hover {
+      color: #82b534;
+      }
+      button {
+      width: 10%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #8ebf42; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #82b534;
+      }
+	  
+      @media (min-width: 568px) {
+	 .account-details >div {
+      width: 50%;
+      }
+      label {
+      width: 20%;
+      }
+      input {
+      width: 40%;
+      }
+      select, .range, .gender, .bdate-block {
+      width: calc(50% + 10px);
+      }
+	  }
+	  
+	    @media (min-width: 568px) {
+	  .tec-details >div {
+      width: 50%;
+      }
+      label {
+      width: 20%;
+      }
+      input {
+      width: 40%;
+      }
+	  textarea{
+	  }
+      select, .range, .gender, .bdate-block {
+      width: calc(70% + 16px);
+      }
+	  }
+     
+	 
+	  
+ 
+    </style>
+  </head>
+ 
+  <body>
+  
+    <div class="main-block">
+    <form  method="post">
+      <h1>حالة الاجهزة التقنيه بالمدارس</h1>
+      <fieldset>
+        <legend>
+          <h3>معلومات المدرسة </h3>
+        </legend>
+        <div  class="account-details">
+          <div><label>اسم المدرسة </label><input type="text" name="school_name" ></div>
+          <div><label>اسم المدير</label><input type="text" name="manager_name" ></div>
+          <div><label>الرقم الوطني</label><input type="text" name="school_number" id="school_number"></div>
+          <div><label>تاريخ الزيارة</label><input type="text" name="date"></div>
+		  <div><label>مرحلة المدرسة</label><input type="text" name="school_range"  ></div>
+	
+			  
+			  
+			  
+		  <div class="birthdate"><label>المحافظة</label>
+		      <div class="bdate-block">
+		       <select class="city"  >
+                  <option value=""></option>
+                  <option value="اريحا">اريحا</option>
+                  <option value="February">بيت لحم</option>
+                  <option value="March">الخليل</option>
+                  <option value="April">نابلس</option>
+                  <option value="May">رام الله</option>
+                  <option value="June">سلفيت</option>
+                  <option value="July">قلقيلية</option>
+                  <option value="August">جنين</option>
+                  <option value="September">طوباس</option>
+                  <option value="October">طولكرم</option>
+                 
+                </select>
+		  
+		  
+		  </div>
+		   </div>
+       
+	     <div>
+              <label>جنس المدرسة:</label>
+              <div class="gender">
+                <input type="radio" value="bodys" id="male" name="gender"  />
+                <label for="male" class="radio">ذكور</label>
+                <input type="radio" value="girls" id="female" name="gender"  />
+                <label for="female" class="radio">اناث</label>
+				<input type="radio" value="boy_girl" id="other" name="gender"  />
+                <label for="female" class="radio">مختلطه</label>
+              </div>
+            </div>
+			
+			<div>
+              <label>موقع المدرسه:</label>
+              <div class="location">
+			  
+                <input type="radio" value="ccity" id="city" name="location"  />
+                <label for="ccity"  class="radio">مدينة</label>
+                <input type="radio" value="cvillage" id="village" name="location"  />
+                <label for="cvillage" class="radio">قرية</label>
+				
+              </div>
+            </div>
+		
+   
+            <div style="width:70%">
+              <label>مرحلة المدرسة:</label>
+			  
+              <div class="range"> <label>اول</label><input  type="checkbox" name="one"  ></div>
+			  <div class="range"> <label>ثاني</label><input type="checkbox" name="two"  ></div>
+			  <div class="range"> <label>ثالث</label><input type="checkbox" name="three"  ></div>
+			  <div class="range"> <label>رابع</label><input type="checkbox" name="four"  ></div>
+			  <div class="range"> <label>خامس</label><input type="checkbox" name="five"  ></div>
+			  <div class="range"> <label>سادس</label><input type="checkbox" name="six"  ></div>
+			  <div class="range"> <label>سابع</label><input type="checkbox" name="seven"  ></div>
+			  <div class="range"> <label>ثامن</label><input type="checkbox" name="eight"  ></div>
+			  <div class="range"> <label>تاسع</label><input type="checkbox" name="nine"  ></div>
+			  <div class="range"> <label>عاشر</label><input type="checkbox" name="ten"  ></div>
+			  <div class="range"> <label> اول ثانوي</label><input type="checkbox" name="eleven"  ></div>
+			  <div class="range"> <label>ثاني ثانوي</label><input type="checkbox" name="twelve"  ></div>
+            </div>
+
+		
+		
+		
+		  </div> 
+		
+		
+      </fieldset>
+	  
+	  
+	  
+	  
+	  
+	    <fieldset>
+        <legend>
+          <h3>تفاصيل الاجهزةالتقنية </h3>
+        </legend>
+        <div  class="account-details">
+          
+            <div><label>Desktop num</label><input type="text" name="desktop_num"  ></div>
+			<div><label>Desktop details</label><textarea id="desktop" name="desktop" rows="3" cols="37">  </textarea></div>
+			
+			
+			
+            <div><label>Laptop num</label><input type="text" name="laptop_num"  ></div>
+			<div><label>Laptop details</label><textarea id="laptop" name="laptop" rows="3" cols="37">  </textarea></div>
+			
+			
+			
+            <div><label>Tablet num</label><input type="text" name="tablets_num"  ></div>
+			<div><label>Tablet details</label><textarea id="tablet" name="tablets" rows="3" cols="37">  </textarea></div>
+			
+			
+			 
+            <div><label>Mobiles num</label><input type="text" name="mobiles_num"  ></div>
+			<div><label>Mobiles details</label><textarea id="mobiles" name="mobiles" rows="3" cols="37">  </textarea></div>
+			
+			
+			
+            <div><label>inter_proj num</label><input type="text" name="inter_proj"  ></div>
+			<div><label>inter_proj details</label><textarea id="inter_num" name="inter_num" rows="3" cols="37">  </textarea></div>
+			
+			
+			
+            <div><label>smart_board num</label><input type="text" name="smart_board"  ></div>
+			<div><label>smart_board details</label><textarea id="smart_num" name="smart_num" rows="3" cols="37">  </textarea></div>
+			
+			
+			
+            <div><label>lcd num</label><input type="text" name="lcd_num"  ></div>
+			<div><label>lcd details</label><textarea id="lcd" name="lcd" rows="3" cols="37">  </textarea></div>
+			
+			
+			 
+            <div><label>smart_tv num</label><input type="text" name="tv_num"  ></div>
+			<div><label>smart_tv details</label><textarea id="smart_tv" name="smart_tv" rows="3" cols="37">  </textarea></div>
+			
+			
+			<div><label>inter_tv num</label><input type="text" name="inter_tv_num"  ></div>
+			<div><label>smart_tv details</label><textarea id="inter_tv" name="inter_tv" rows="3" cols="37">  </textarea></div>
+			
+         
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h3>تفاصيل مختبر الحاسوب  </h3>
+        </legend>
+        <div  class="account-details">
+		
+		
+		  <div><label>عدد الاجهزة</label><input type="text" name="pc_number"  ></div>
+		  <div><label>تفاصيل الاجهزة</label><textarea id="pc_detalies" name="pc_detalies" rows="3" cols="37">  </textarea></div>
+          <div><label>مسؤول المختبر</label><input type="text" name="comp_manager"  ></div>
+		 
+			<div style="width:70%">
+              
+              <div class="range"> <label>توفر غرفه مناسبة </label><input type="checkbox" name="comp_lap_room"  ></div>
+			  <div class="range"> <label>وجود شبكة</label><input type="checkbox" name="comp_network"  ></div>
+			  <div class="range"> <label>توفر مختبر حاسوب</label><input type="checkbox" name="comp_lap"  ></div>
+			  <div class="range"> <label>وجود تفريغ حاسوب .25</label><input type="checkbox" name="comp_lap25"  ></div>
+			  <div class="range"> <label>وجود انترنت بالمختبر</label><input type="checkbox" name="comp_internet"  ></div>
+			 
+            </div>
+
+        </div>
+      </fieldset>
+	  
+	      <fieldset>
+        <legend>
+          <h3>تفاصيل مختبر العلوم  </h3>
+        </legend>
+        <div  class="account-details">
+		
+		
+		  <div><label>مسؤول المختبر</label><input type="text" name="sience_lap_manager"  ></div>
+		  <div><label>ملاحظات</label><textarea id="sience_note" name="sience_note" rows="3" cols="37">  </textarea></div>
+          
+		 
+			<div style="width:70%">
+              <div class="range"> <label>توفر تفريغ علوم 0.25 </label><input type="checkbox" name="sience_lap25"  ></div>
+              <div class="range"> <label>توفر غرفه علوم </label><input type="checkbox" name="sience_lap"  ></div>
+			  <div class="range"> <label>خزائن ورفوف فقط</label><input type="checkbox" name="sience_box"  ></div>
+			  <div class="range"> <label>توفر جهاز حاسوب بالمختبر</label><input type="checkbox" name="sience_pc"  ></div>
+			  <div class="range"> <label>موصولة بالانترنت</label><input type="checkbox" name="sience_internt"  ></div>
+			  <div class="range"> <label>وجود lcd </label><input type="checkbox" name="sience_lcd"  ></div>
+			 
+            </div>
+
+        </div>
+      </fieldset>  
+	  
+	  
+	  <fieldset>
+        <legend>
+          <h3>تفاصيل المكتبة   </h3>
+        </legend>
+        <div  class="account-details">
+		
+		
+			<div style="width:80%">
+              <div class="range"> <label>تفريغ المكتبه 0.5 </label><input type="checkbox" name="libr5"  ></div>
+              <div class="range"> <label>تفريغ المكتبة 0.25 </label><input type="checkbox" name="libr25"  ></div>
+			  <div class="range"> <label>خزائن ورفوف فقط</label><input type="checkbox" name="libr_box"  ></div>
+			  <div class="range"> <label>توفر غرفه مكتبه</label><input type="checkbox" name="libr"  ></div>
+			  <div class="range"> <label>توفر جهاز حاسوب بالمكتبه</label><input type="checkbox" name="libr_pc"  ></div>
+			  <div class="range"> <label>موصولة بالانترنت</label><input type="checkbox" name="libr_internt"  ></div>
+			  <div class="range"> <label>وجود lcd </label><input type="checkbox" name="libr_lcd"  ></div>
+			 
+            </div>
+		  
+		  <div><label>ملاحظات</label><textarea id="lib_note" name="lib_note" rows="3" cols="37">  </textarea></div>
+          
+		 
+
+        </div>
+      </fieldset>  
+	  
+	  
+	  <fieldset>
+        <legend>
+          <h3>تفاصيل الانظمة التقنيه </h3>
+        </legend>
+        <div  class="account-details">
+		  <div><label>ساعه الدوام النوع:</label><input type="text" name="watch_type"  ></div>
+          <div><label>المصدر:</label><input type="text" name="watch_source"  ></div>
+          <div><label> copy printer : </label><input type="text" name="copy_number"  ></div>
+          <div><label>المصدر :</label><input type="text" name="copy_specific"  ></div>
+		  <div><label>photocopyer:</label><input type="text" name="photo_number"></div>
+		  <div><label>المصدر:  </label><input type="text" name="photo_specific"  ></div>
+		  <div><label>نظام المراقبه  </label><input type="text" name="camera"  ></div>
+          <div><label>ملاحظات</label><textarea id="note" name="note" rows="3" cols="37">  </textarea></div>
+		 
+
+        </div>
+      </fieldset>  
+	  
+	  
+	  
+	  
+	  
+	  <?php 
+	    $mypermission = $_SESSION['permission'];
+	        echo"jlkkllkkllkk" $mypermission ;
+	
+     ?>
+	  
+      
+      <button type="submit" formaction="insert.php">حفظ</button>
+	  <button type="submit" formaction="update.php" >تعديل</button>
+	  <button type="submit" formaction="school_export.php">تحميل تقرير للمدرسة</button>
+	  <button type="submit" formaction="export.php">تحميل تقرير للمدارس</button>
+	  <button type="submit" href="/">تحميل تقرير مخصص</button>
+
+
+
+    </form>
+    </div> 
+	
+	<script>
+     
+
+
+    document.getElementById('school_number').addEventListener('keypress', function(event) {
+        if (event.keyCode == 13) {
+		   
+            event.preventDefault();
+			window.location="retrivee.php?school_number="+document.getElementById('school_number').value;
+        return true;
+        }
+    });
+	
+ </script>
+
+  </body>
+</html>
