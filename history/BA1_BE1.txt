@@ -1,0 +1,28 @@
+Judge Name: BA1
+        Project Code: BE1
+        Research Question (20 Points)
+            Clear, focused goal (1-5) -> 3
+            Originality of the idea (1-5) -> 5
+            Testable using scientiﬁc methods (1-5) -> 4
+            Sustainability of the project (1-5) -> 3
+        Methodology (15 points)
+            Eﬀective motivation. Accuracy and clarity of science. Level of knowledge and understanding of concepts (1-5) -> 3
+            Data collection methods are speciﬁc and appropriate (1-5) -> 1
+            Variables and controls (1-5) -> 1
+        Implementation (20 points)
+            Systematic data analysis (1-5) -> 3
+            The consistency of the results (1-5) -> 1
+            Appropriate mathematical and statistical methods application (1-5) -> 4
+            Scope and clarity of introduction, background and literature cited (1-5) -> 4
+        Report & Poster Standards (10 points)
+            Commitment to Report Writing Standards -> 1
+            Commitment to Poster Writing Standards  -> 4
+        The Presentation (35 points)
+            1 - The student(s) demonstrates no evidence of mastery of the underlying science -> 2
+            Conciseness, accuracy, and eﬀective communication of the project details -> 2
+            Understand the interpretation and determinants of the results and conclusions -> 5
+            Independence level during project implementation -> 5
+            Presentation of the workﬂow plan within the time allocated -> 5
+            Recognition of creativity and potential impact in science, society and/or economics -> 5
+            Suﬃcient understanding of the research's risk and errors sources -> 2
+        

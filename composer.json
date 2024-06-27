@@ -1,0 +1,27 @@
+{
+    "name": "yourname/yourproject",
+    "description": "A brief description of your project",
+    "type": "project",
+    "require": {
+        "php": ">=8.2",
+        "composer/composer": "^2.0",
+        "ezyang/htmlpurifier": "^4.13",
+        "maennchen/zipstream-php": "^2.1",
+        "markbaker/complex": "^3.0",
+        "myclabs/php-enum": "^1.8",
+        "phpoffice/phpspreadsheet": "^1.23",
+        "psr/log": "^1.1",
+        "symfony/symfony": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "YourNamespace\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
